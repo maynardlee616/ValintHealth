@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Valint Health — Healthcare staffing and workforce solutions. Get in touch with our team today." />
+  <meta name="keywords" content="healthcare staffing, medical recruitment, veteran owned, healthcare professionals, hospital staffing" />
+  <title>Valint Health | Healthcare Staffing Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+
+    :root {
+      --sky:      #FBF0F0;
+      --blue:     #C0272D;
+      --blue-dk:  #8F1A1E;
+      --navy:     #2B0D0D;
+      --white:    #FFFFFF;
+      --slate:    #FAF0F0;
+      --muted:    #6B4A4A;
+      --border:   #F0D0D0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--white);
+      color: var(--navy);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Nav ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 48px;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 80px;
+      width: auto;
+    }
+
+    .logo-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 40px;
+      font-weight: 800;
+      color: #000000;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-name span { 
+      color: var(--blue); 
+    }
+
+    .nav-cta {
+      background: var(--blue);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+      position: absolute;
+      right: 48px;
+    }
+
+    .nav-cta:hover { 
+      background: var(--blue-dk); 
+    }
+
+    /* ── Hero ── */
+    .hero-section {
+      background: linear-gradient(135deg, #FBF0F0 0%, #FAD4D4 40%, #FFEBEB 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 48px 80px;
+      gap: 64px;
+      flex: 1;
+    }
+
+    .hero-text {
+      max-width: 520px;
+      flex-shrink: 0;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      background: rgba(192,39,45,0.1);
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(36px, 5.5vw, 54px);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+
+    .hero-text h1 span { 
+      color: var(--blue); 
+    }
+
+    .hero-text p {
+      font-size: 17.5px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      background: var(--blue);
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 600;
+      padding: 16px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .hero-btn:hover {
+      background: var(--blue-dk);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(192, 39, 45, 0.2);
+    }
+
+    /* ── Photo grid ── */
+    .hero-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 220px 220px;
+      gap: 12px;
+      border-radius: 20px;
+      overflow: hidden;
+      flex-shrink: 0;
+      width: 460px;
+      box-shadow: 0 25px 70px rgba(43,13,13,0.18);
+    }
+
+    .hero-photos img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .hero-photos img:hover { 
+      transform: scale(1.05); 
+    }
+
+    .photo-tall {
+      grid-row: span 2;
+    }
+
+    /* ── Photo section ── */
+    .photos-section {
+      background: var(--slate);
+      padding: 80px 48px;
+      text-align: center;
+    }
+
+    .section-eyebrow {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
+
+    .photos-section h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(26px, 4.5vw, 38px);
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      margin-bottom: 52px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .photo-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .photo-card {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(43,13,13,0.1);
+      aspect-ratio: 4/3;
+      transition: transform 0.3s ease;
+    }
+
+    .photo-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .photo-card:hover img { 
+      transform: scale(1.06); 
+    }
+
+    /* ── CTA band ── */
+    .cta-band {
+      background: linear-gradient(135deg, #C0272D 0%, #8F1A1E 100%);
+      text-align: center;
+      padding: 72px 24px;
+    }
+
+    .cta-band h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(28px, 4.5vw, 40px);
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .cta-band p {
+      font-size: 17.5px;
+      color: rgba(255,255,255,0.9);
+      max-width: 620px;
+      margin: 0 auto 40px;
+    }
+
+    .cta-btn-light {
+      display: inline-block;
+      background: var(--white);
+      color: var(--blue);
+      font-size: 16px;
+      font-weight: 700;
+      padding: 16px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .cta-btn-light:hover {
+      background: var(--sky);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    /* ── SBA Badge ── */
+    .sba-badge {
+      text-align: center;
+      padding: 32px 24px;
+      background: var(--white);
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 14px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      background: var(--white);
+      margin-top: auto;
+    }
+
+    footer a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    footer a:hover { 
+      text-decoration: underline; 
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 860px) {
+      .hero-section { 
+        flex-direction: column; 
+        padding: 60px 24px 50px; 
+        gap: 48px; 
+      }
+      .hero-photos { 
+        width: 100%; 
+        max-width: 480px; 
+        grid-template-rows: 180px 180px;
+      }
+
+      .photo-row { 
+        grid-template-columns: repeat(2, 1fr); 
+      }
+      .photo-row .photo-card:last-child { 
+        grid-column: span 2; 
+      }
+    }
+
+    @media (max-width: 520px) {
+      nav { 
+        padding: 16px 20px; 
+      }
+      .logo img { height: 52px; }
+      .logo-name { font-size: 24px; }
+      .hero-photos { 
+        grid-template-rows: 140px 140px; 
+      }
+      .photo-row { 
+        grid-template-columns: 1fr; 
+      }
+      .photo-row .photo-card:last-child { 
+        grid-column: auto; 
+      }
+      .photos-section { 
+        padding: 60px 20px; 
+      }
+    }
+
+    @media (max-height: 520px) and (orientation: landscape) {
+      .hero-section { padding: 40px 48px 30px; }
+    }
+ 
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a href="/" class="logo">
+      <img src="logo.png" alt="Valint Health logo" loading="lazy" />
+      <span class="logo-name">VALINT <span>HEALTH</span></span>
+    </a>
+    <a href="mailto:info@valinthealth.com" class="nav-cta">Contact Us</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-section">
+    <div class="hero-text">
+      <span class="hero-eyebrow">Healthcare Staffing</span>
+      <h1>MISSION READY STAFF<br><span>HEALTHCARE EXCELLENCE</span></h1>
+      <p>
+        Valint Health connects exceptional healthcare professionals with leading facilities across the nation. 
+        We're here to build the teams that elevate patient care.
+      </p>
+      <a href="mailto:info@valinthealth.com" class="hero-btn">Get in Touch</a>
+    </div>
+    
+    <div class="hero-photos">
+      <img class="photo-tall" src="doctor_working.jpg" alt="Doctor performing surgery in operating room" loading="lazy" />
+      <img src="doctor_messaging.jpg" alt="Doctor responding to a message on mobile device" loading="lazy" />
+      <img src="caregiver_working.jpg" alt="Caregiver providing compassionate care" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- Photo row -->
+  <section class="photos-section">
+    <div class="section-eyebrow">Our People</div>
+    <h2>Care Teams That Go the Distance</h2>
+    <div class="photo-row">
+      <div class="photo-card">
+        <img src="rad_tech.jpg" alt="Radiology technicians working together" loading="lazy" />
+      </div>
+      <div class="photo-card">
+        <img src="emergency_health.jpg" alt="Medical staff in emergency department" loading="lazy" />
+      </div>
+      <div class="photo-card">
+        <img src="cancer_treatment.jpg" alt="Oncology team providing patient treatment" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="cta-band">
+    <h2>Ready to Staff Your Facility?</h2>
+    <p>Tell us what you need — we'll find the right fit, fast.</p>
+    <a href="mailto:info@valinthealth.com" class="cta-btn-light">Reach Out Today</a>
+  </section>
+
+  <!-- SBA Badge -->
+  <div class="sba-badge">
+    <img
+      src="SBA_SDVOSB image.png"
+      alt="Service Disabled Veteran Owned Small Business certified"
+      style="height: 90px; width: auto;"
+      loading="lazy"
+    />
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Valint Health &nbsp;·&nbsp; <a href="mailto:info@valinthealth.com">info@valinthealth.com</a></p>
+  </footer>
+
+</body>
+</html>
